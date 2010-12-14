@@ -1,0 +1,11 @@
+plan 9
+passed 1 Beverage::Coffee loaded.
+passed 2 Cup creation.
+passed 3 Kettle location.
+passed 4 Boiling water.
+passed 5 Black coffee.
+failed 6 Milk location.
+comment # Milk not found in fridge.
+passed 7 White coffee. SKIP no milk.
+passed 8 Espresso SKIP espresso machine not available.
+failed 9 Non-dairy creamer TODO unimplemented.

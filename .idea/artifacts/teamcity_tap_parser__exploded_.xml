@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact name="teamcity-tap-parser (exploded)">
+    <output-path>$PROJECT_DIR$/out/artifacts/teamcity_tap_parser__exploded_</output-path>
+    <root id="root">
+      <element id="directory" name="agent">
+        <element id="archive" name="teamcity-tap-agent.zip">
+          <element id="directory" name="teamcity-tap-plugin">
+            <element id="directory" name="lib">
+              <element id="archive" name="teamcity-tap-agent.jar">
+                <element id="module-output" name="teamcity-tap" />
+                <element id="module-output" name="teamcity-tap-parser" />
+              </element>
+            </element>
+          </element>
+        </element>
+      </element>
+      <element id="file-copy" path="$PROJECT_DIR$/teamcity-plugin.xml" />
+    </root>
+  </artifact>
+</component>

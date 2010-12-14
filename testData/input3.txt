@@ -1,0 +1,24 @@
+t\00_compile.t .......
+1..6
+ok 1 - use TAP::Formatter::TeamCity;
+ok 2 - The object isa TAP::Formatter::TeamCity
+not ok 3 - The object isa xTAP::Formatter::Base
+#   Failed test 'The object isa xTAP::Formatter::Base'
+#   at t\00_compile.t line 23.
+#     The object isn't a 'xTAP::Formatter::Base' it's a 'TAP::Formatter::TeamCity'
+ok 4 - use TAP::Formatter::Session::TeamCity;
+ok 5 - The object isa TAP::Formatter::Session::TeamCity
+ok 6 - The object isa TAP::Formatter::Session
+# Looks like you failed 1 test of 6.
+Dubious, test returned 1 (wstat 256, 0x100)
+Failed 1/6 subtests
+t\98_pod_syntax.t ....
+1..2
+ok 1 - POD test for blib\lib\TAP\Formatter\TeamCity.pm
+ok 2 - POD test for blib\lib\TAP\Formatter\Session\TeamCity.pm
+ok
+t\99_pod_coverage.t ..
+1..2
+ok 1 - Pod coverage on TAP::Formatter::TeamCity
+ok 2 - Pod coverage on TAP::Formatter::Session::TeamCity
+ok

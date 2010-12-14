@@ -1,0 +1,10 @@
+plan 4
+passed 1 Input file opened
+failed 2 First line of the input valid.
+unknown More output from test 2. There can be
+unknown arbitrary number of lines for any output
+unknown so long as there is at least some kind
+unknown of whitespace at beginning of line.
+passed 3 Read the rest of the file
+comment #TAP meta information
+failed 4 Summarized correctly TODO Not written yet

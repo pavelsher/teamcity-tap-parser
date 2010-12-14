@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="teamcity-tap-parser">
+    <output-path>$PROJECT_DIR$/out/artifacts/teamcity_tap_parser</output-path>
+    <root id="archive" name="teamcity_tap_parser.zip">
+      <element id="artifact" artifact-name="teamcity-tap-parser (exploded)" />
+    </root>
+  </artifact>
+</component>

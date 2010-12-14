@@ -1,0 +1,11 @@
+1..9
+ok 1 - Beverage::Coffee loaded.
+ok 2 - Cup creation.
+ok 3 - Kettle location.
+ok 4 - Boiling water.
+ok 5 - Black coffee.
+not ok 6 - Milk location.
+# Milk not found in fridge.
+ok 7 - White coffee. # Skipped, no milk.
+ok 8 - Espresso # Skipped, espresso machine not available.
+not ok 9 - Non-dairy creamer # TODO, unimplemented.

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/teamcity-tap/teamcity-tap.iml" filepath="$PROJECT_DIR$/teamcity-tap/teamcity-tap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/teamcity-tap-parser.iml" filepath="$PROJECT_DIR$/teamcity-tap-parser.iml" />
+    </modules>
+  </component>
+</project>
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teamcity-plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="urn:shemas-jetbrains-com:teamcity-plugin-v1-xml">
+  <info>
+    <name>teamcity-tap-parser</name>
+    <display-name>This plugin watches for text output of the build and if TAP output is recognized (http://en.wikipedia.org/wiki/Test_Anything_Protocol) transforms it to TeamCity tests.</display-name>
+    <version>0.1</version>
+  </info>
+  <deployment use-separate-classloader="false" />
+</teamcity-plugin>
