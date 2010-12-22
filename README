@@ -1,2 +1,32 @@
 
-Adds support of TAP protocol (http://en.wikipedia.org/wiki/Test_Anything_Protocol) to Jetbrains TeamCity (http://jetbrains.com/teamcity).
+Adds support for TAP protocol (http://en.wikipedia.org/wiki/Test_Anything_Protocol) 
+to TeamCity continuous integration server (http://www.jetbrains.com/teamcity).
+
+How To Build
+==================
+
+1) Open project in IntelliJ IDEA Community or Ultimate Edition (http://www.jetbrains.com/idea/download/index.html)
+2) Choose Menu Build -> Build Artifacts
+3) Select teamcity-tap-parser artifact from the menu
+4) teamcity-tap-parser.zip file must be created in the project root
+
+
+How To Install
+==================
+
+The plugin is compatible with TeamCity 6.0 and higher. To install plugin place teamcity-tap-parser.zip file 
+into the .BuildServer/plugins directory and restart TeamCity server. Then wait till agents upgrade.
+
+
+License
+==========
+
+Apache License 2.0
+
+
+Author
+========
+
+Pavel Sher 
+TeamCity developer
+
