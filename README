@@ -1,6 +1,5 @@
 
-Adds support for TAP protocol (http://en.wikipedia.org/wiki/Test_Anything_Protocol) 
-to TeamCity continuous integration server (http://www.jetbrains.com/teamcity).
+Adds support for TAP protocol (http://en.wikipedia.org/wiki/Test_Anything_Protocol) to TeamCity continuous integration server (http://www.jetbrains.com/teamcity).
 
 How To Build
 ==================
@@ -14,8 +13,7 @@ How To Build
 How To Install
 ==================
 
-The plugin is compatible with TeamCity 6.0 and higher. To install plugin place teamcity-tap-parser.zip file 
-into the .BuildServer/plugins directory and restart TeamCity server. Then wait till agents upgrade.
+The plugin is compatible with TeamCity 6.0 and higher. To install plugin place teamcity-tap-parser.zip file into the .BuildServer/plugins directory and restart TeamCity server. Then wait till agents upgrade.
 
 
 License
@@ -28,5 +26,4 @@ Author
 ========
 
 Pavel Sher 
-TeamCity developer
 
