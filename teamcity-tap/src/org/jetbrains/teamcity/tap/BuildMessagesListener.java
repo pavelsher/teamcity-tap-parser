@@ -1,9 +1,6 @@
 package org.jetbrains.teamcity.tap;
 
-import jetbrains.buildServer.agent.AgentLifeCycleAdapter;
-import jetbrains.buildServer.agent.AgentLifeCycleListener;
-import jetbrains.buildServer.agent.AgentRunningBuild;
-import jetbrains.buildServer.agent.BuildProgressLogger;
+import jetbrains.buildServer.agent.*;
 import jetbrains.buildServer.messages.BuildMessage1;
 import jetbrains.buildServer.messages.DefaultMessagesInfo;
 import jetbrains.buildServer.messages.Status;
@@ -44,16 +41,26 @@ public class BuildMessagesListener extends AgentLifeCycleAdapter {
     }
   }
 
+  @Override
+  public void runnerFinished(@NotNull BuildRunnerContext runner, @NotNull BuildFinishedStatus status) {
+    super.runnerFinished(runner, status);
+    myTapHandler.buildStepFinished();
+  }
+
   private static class ServiceMessageConverter implements TapHandler {
     private BuildProgressLogger myLogger;
+    private boolean myTapMode = false;
 
     public void version(int version) {
+      myTapMode = true;
     }
 
     public void plan(int numTests, Directive directive) {
+      myTapMode = true;
     }
 
     public synchronized void test(int orderNum, boolean ok, final String description, Directive directive) {
+      if (!myTapMode) return;
       final String testName = description != null ? description : "test-" + orderNum;
       if (directive != null) {
         message(new TestIgnored(testName, directive.toString()).asString());
@@ -70,10 +77,12 @@ public class BuildMessagesListener extends AgentLifeCycleAdapter {
     }
 
     private void message(String text) {
+      if (!myTapMode) return;
       myLogger.logMessage(createMessage(text, Status.NORMAL));
     }
 
     private void error(String text) {
+      if (!myTapMode) return;
       myLogger.logMessage(createMessage(text, Status.ERROR));
     }
 
@@ -85,6 +94,7 @@ public class BuildMessagesListener extends AgentLifeCycleAdapter {
     }
 
     public synchronized void bailout(String text) {
+      if (!myTapMode) return;
       error(text);
     }
 
@@ -93,6 +103,10 @@ public class BuildMessagesListener extends AgentLifeCycleAdapter {
 
     public void setLogger(BuildProgressLogger logger) {
       myLogger = logger;
+    }
+
+    public void buildStepFinished() {
+      myTapMode = false;
     }
   }
 }
